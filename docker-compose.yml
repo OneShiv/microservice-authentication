@@ -1,0 +1,13 @@
+version: "2"
+services:
+  auth-service1:
+    container_name: auth-service
+    image: auth-service:latest
+    ports:
+      - "8000:8000"
+  mongo:
+    image: mongo
+    volumes:
+      - ./data:/data/db
+    ports:
+      - "27017:27017"
